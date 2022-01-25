@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(express.static("public"));
 //what the readme said
 mongoose.connect("mongodb://localhost/bigbudget", {
-  useNewUrlParser: true,
+  //useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
+  //useCreateIndex: true,
   useFindAndModify: false
 });
 
