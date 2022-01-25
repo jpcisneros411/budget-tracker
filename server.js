@@ -15,8 +15,11 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/bigbudget", {
+mongoose.connect(
+  process.env.MONGODBURI || "mongodb://localhost/bigbudget", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
   useFindAndModify: false
 });
 
